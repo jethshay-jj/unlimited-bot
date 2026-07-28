@@ -1,8 +1,8 @@
 import os
 
-TOKEN = os.getenv('DISCORD_TOKEN', 'TU_TOKEN_AQUI')
+TOKEN = os.getenv('MTUzMDk4Mjc4MjE0OTQ2NDA2NA.GIZhFn.s8z5X2zWmKx6jN6qLwo-ISvORdxI7EPDY84IGA')
 PREFIX = '!'
-GUILD_ID = 1530996763673104676  # Reemplaza con tu server ID
+GUILD_ID = 1482867699293098044# Reemplaza con tu server ID
 
 # Canales
 CHANNELS = {
