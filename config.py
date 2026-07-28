@@ -1,10 +1,21 @@
 import os
+from dotenv import load_dotenv
 
-TOKEN = os.getenv('MTUzMDk4Mjc4MjE0OTQ2NDA2NA.GIZhFn.s8z5X2zWmKx6jN6qLwo-ISvORdxI7EPDY84IGA')
+# Cargar variables de entorno
+load_dotenv()
+
+# Token desde variable de entorno (SEGURO)
+TOKEN = os.getenv('DISCORD_TOKEN')
+if not TOKEN:
+    raise ValueError("❌ DISCORD_TOKEN no encontrado. Creá un archivo .env")
+
+GUILD_ID = int(os.getenv('GUILD_ID', 0))
+if GUILD_ID == 0:
+    raise ValueError("❌ GUILD_ID no encontrado. Creá un archivo .env")
+
 PREFIX = '!'
-GUILD_ID = 1482867699293098044# Reemplaza con tu server ID
 
-# Canales
+# Canales (MODIFICAR con los nombres de tus canales)
 CHANNELS = {
     'registro': 'registro-id',
     'nominaciones': 'nominaciones',
@@ -14,7 +25,7 @@ CHANNELS = {
     'testigos': 'testigos'
 }
 
-# Roles
+# Roles (MODIFICAR con los nombres de tus roles)
 ROLES = {
     'ciudadano': 'Ciudadano',
     'vip': 'Miembro VIP',
@@ -22,5 +33,8 @@ ROLES = {
     'leyenda': 'Leyenda del Mes'
 }
 
-# API Albion
+# API Albion (NO MODIFICAR)
 ALBION_API = 'https://gameinfo.albiononline.com/api/gameinfo/search?q='
+
+# Configuración de base de datos
+DB_PATH = 'data/unlimited.db'
