@@ -13,7 +13,7 @@ intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 ALBION_API_URL = "https://gameinfo.albiononline.com/api/gameinfo/search?q="
-WELCOME_CHANNEL_NAME = "bienvenida"
+WELCOME_CHANNEL_NAME = "registro-id"
 CITIZEN_ROLE_NAME = "Ciudadano"
 
 @bot.event
